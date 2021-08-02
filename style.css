@@ -1,0 +1,95 @@
+body {
+	background-color: #e6f2ff;
+}
+
+h1 {
+	color: #004080;
+	text-align: center;
+	font-family: "Lucinda Handwriting", cursive;
+	font-size: 2em;
+}
+
+h2 {
+	color: #004080;
+	text-align: left;
+	font-family: "Lucinda Handwriting", cursive;
+	font-size: 1.25em;
+}
+
+h3 {
+	color: #004080;
+	text-align: left;
+	font-family: "Lucinda Handwriting", cursive;
+	font-size: 1em;
+}
+
+button {
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+.grid-container {
+ 	display: grid;
+ 	grid-template-columns: 1fr 1fr;
+ 	grid-column-gap: 10px;
+}
+
+.background_header {
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.background {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+.button_header {
+	text-align: center;
+	grid-row-start: 1;
+	grid-column-start: 2;
+}
+
+.buttons {
+	grid-row-start: 2;
+	grid-column-start: 2;
+	text-align: center;
+}
+
+#intro {
+	color: #0059b3;
+	text-align: left;
+	font-family: "Georgia", serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#learn_header {
+	color: #0059b3;
+	font-style: bold;
+	font-family: "Lucinda Handwriting", cursive;
+	font-size: 1em;
+	margin-bottom: 20px;
+}
+
+#return {
+	float: right;
+	font-family: "Lucinda Handwriting", cursive;
+}
+
+.grid-container-ail {
+ 	display: grid;
+ 	grid-template-columns: 1fr 1fr;
+ 	grid-column-gap: 10px;
+}
+
+.oil_info {
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.oil_pic {
+	grid-row-start: 1;
+	grid-column-start: 2;
+}
