@@ -26,5 +26,5 @@ module.exports = function(app) {
     app.route('/flu')
         .get(controller.flu);
     app.route('/headaches')
-        .get(controller.headache);
+        .get(controller.headaches);
 };

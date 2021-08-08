@@ -21,9 +21,10 @@ var controllers = {
            });
        },
     test: function(req, res){
-        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Peppermint')
-            .then(res => res.text())
-            .then(body => res.send(body))
+        //fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Peppermint')
+        //    .then(res => res.text())
+        //    .then(body => res.send(body))
+        res.json({msg: 'This is CORS-enabled for all origins!'})
     },
     home: function(req, res){
         fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Essential_oil')
@@ -34,7 +35,103 @@ var controllers = {
                     stuffToDisplay.background = body;
                     return stuffToDisplay;
                   }
-                  res.render('background', genContext());
+                  res.render('home', genContext());
+            });
+    },
+    ab_pain: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Thyme')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('ab_pain', genContext());
+            });
+    },
+    bug_bites: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Lavender')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('bug_bites', genContext());
+            });
+    },
+    burns: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Lavender')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('burns', genContext());
+            });
+    },
+    cold: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Eucalyptus')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('cold', genContext());
+            });
+    },
+    cough: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Ginger')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('cough', genContext());
+            });
+    },
+    cuts: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Melaleuca')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('cuts', genContext());
+            });
+    },
+    flu: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Melaleuca')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('flu', genContext());
+            });
+    },
+    headaches: function(req, res){
+        fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Lavender')
+            .then(res => res.text())
+            .then(body => {
+                function genContext(){
+                    var stuffToDisplay = {};
+                    stuffToDisplay.background = body;
+                    return stuffToDisplay;
+                  }
+                  res.render('headaches', genContext());
             });
     }
 };
