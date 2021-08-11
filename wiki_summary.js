@@ -11,9 +11,11 @@ var wiki_sum = {
             //success!
     
             const $ = cheerio.load(html);
-            //sum1 = $('table').nextAll('p').text();
-            sum1 = $('table').nextUntil('div').first().text();
-            //sum1 = $('div[class=mw-parser-output]').children('p').first().text();
+            sum1 = $('div[class=mw-parser-output]').children('p').first().text();
+
+            if(sum1.length <= 5){
+                sum1 = $('table').nextAll('p').first().text();
+            }
 
             console.log(sum1);
             res.send(sum1);
