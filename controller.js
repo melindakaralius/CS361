@@ -2,6 +2,7 @@
 
 var properties = require('./package.json')
 var wiki_sum = require('./wiki_summary');
+var wiki_date = require('./wiki_date.js');
 var fetch = require('node-fetch');
 
 
@@ -20,6 +21,13 @@ var controllers = {
                res.json(sum1);
            });
        },
+    getHolidays: function(req, res){
+        wiki_date.find(req, res, function(err, holidays) {
+            if (err)
+                res.send(err);
+            res.json(holidays);
+        });
+    },
     test: function(req, res){
         //fetch('http://flip1.engr.oregonstate.edu:3495/wikiscraper/Peppermint')
         //    .then(res => res.text())
@@ -46,8 +54,8 @@ var controllers = {
                     var stuffToDisplay = {};
                     stuffToDisplay.background = body;
                     return stuffToDisplay;
-                  }
-                  res.render('ab_pain', genContext());
+                };
+                res.render('ab_pain', genContext());
             });
     },
     bug_bites: function(req, res){

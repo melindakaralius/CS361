@@ -7,6 +7,8 @@ module.exports = function(app) {
        .get(controller.about);
     app.route('/wikiscraper/:term')
         .get(controller.getSummary);
+    app.route('/datescraper/:term')
+        .get(controller.getHolidays);
     app.route('/test')
         .get(controller.test);
     app.route('/home')

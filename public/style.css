@@ -92,4 +92,34 @@ button {
 .oil_pic {
 	grid-row-start: 1;
 	grid-column-start: 2;
+	max-width: 550px;
+	max-height: 400px;
+}
+
+#thyme {
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#tea_tree {
+    object-fit: cover;
+}
+
+#lavender {
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#giner {
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#eucalyptus {
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

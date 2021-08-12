@@ -11,6 +11,7 @@ var wiki_sum = {
             //success!
     
             const $ = cheerio.load(html);
+            
             sum1 = $('div[class=mw-parser-output]').children('p').first().text();
 
             if(sum1.length <= 5){
